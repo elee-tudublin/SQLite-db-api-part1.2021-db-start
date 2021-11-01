@@ -4,7 +4,7 @@ CREATE TABLE "category" (
 	"category_name"	TEXT NOT NULL,
 	"category_description"	TEXT,
 	PRIMARY KEY("_id" AUTOINCREMENT)
-)
+);
 
 CREATE TABLE "product" (
 	"_id"	INTEGER NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE "product" (
 	"product_price"	REAL NOT NULL DEFAULT 0.00,
 	PRIMARY KEY("_id" AUTOINCREMENT),
 	FOREIGN KEY("category_id") REFERENCES "category"("_id")
-)
+);
 
 -- category inserts
 INSERT INTO category (_id,category_name,category_description) VALUES (1,'Books','Paper and hard cover, fiction and non-fiction');
